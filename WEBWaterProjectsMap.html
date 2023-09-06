@@ -132,8 +132,8 @@ rel="stylesheet"
       .marker {
         border: none;
         cursor: pointer;
-        height: 56px;
-        width: 56px;
+        height: 75px;
+        width: 75px;
       }
 
       /* Marker tweaks */
@@ -189,7 +189,10 @@ rel="stylesheet"
 <button id="fit">Zoom Out</button>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzcnAzNmFsNnNkamgifQ.k_o9SiWhtHBqTPptdVv1ag';
-
+	const bounds = [
+		[-100.638093, 44.582067],
+		[-97.185777, 46.023864]
+	];
       /**
        * Add the map to the page
        */
@@ -197,7 +200,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
         container: 'map',
         style: 'mapbox://styles/bannerbdteam/cllxu93fd01gf01qbh5efcwtt',
         center: [-98.8568355, 45.3084925],
-        zoom: 8,
+        zoom: 7.5,
         scrollZoom: false
       });
 
@@ -212,7 +215,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Eureka West Booster Station',
-              'description': 'Adding an additional booster station west of Eureka will improve capacity in the area.',
+              'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/Eureka-Booster-Station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Eureka',
               'estCompletion': 'Fall 2024'
             }
@@ -225,7 +228,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Water Treatment Plant Expansion',
-              'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components.',
+              'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/Water-Treatment-Plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Selby',
               'estCompletion': 'Summer 2025'
             }
@@ -238,7 +241,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Main Storage Tanks Rehabilitation',
-              'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity.',
+              'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/Water-Treatment-Plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Java',
               'estCompletion': 'Fall 2025'
             }
@@ -251,7 +254,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Rockham West Booster Station',
-              'description': 'The new booster station will increase water pressure in the area west of Rockham.',
+              'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/Rockham-W-Booster-Station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Rockham',
               'estCompletion': 'Fall 2024'
             }
@@ -264,7 +267,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Bristol Booster Station Replacement',
-              'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have incresed capacity and modern equipment.',
+              'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have incresed capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/Bristol-Booster-Station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Bristol',
               'estCompletion': 'Summer 2025'
             }
@@ -277,7 +280,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 			},
 			'properties': {
 				'name': 'Java North Parallel Pipe',
-				'description': 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java.',
+				'description': 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java. Refer to the <a href="https://www.webwaterprojects.org/Java-N-Parallel-Pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
 				'location': 'Rural Java',
 				'estCompletion': 'Fall 2024'
 			}
@@ -290,7 +293,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 			},
 			'properties': {
 				'name': 'Glenham Booster Discharge Pipe',
-				'description': 'The new 6-inch PVC pipe will increase capacity and improve pressure for customers downstream.',
+				'description': 'The new 6-inch PVC pipe will increase capacity and improve pressure for customers downstream. Refer to the <a href="https://www.webwaterprojects.org/Glenham-Booster-Discharge/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
 				'location': 'Rural Glenham and Mobridge',
 				'estCompletion': 'Fall 2024'
 			}
@@ -303,7 +306,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 			},
 			'properties': {
 				'name': 'Parallel Mainline Pipe Moratorium Improvement',
-				'description': 'This project increases system capacity for incoming raw water and outgoing treated water for the expanded water treatment plant.',
+				'description': 'This project increases system capacity for incoming raw water and outgoing treated water for the expanded water treatment plant. Refer to the <a href="https://www.webwaterprojects.org/Parallel-Mainline-Pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
 				'location': 'Rural Glenham and Mobridge',
 				'estCompletion': 'Fall 2025'
 			}
