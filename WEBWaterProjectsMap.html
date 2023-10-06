@@ -176,6 +176,32 @@ rel="stylesheet"
       .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
         border-bottom-color: #91c949;
       }
+	  #legend {
+		padding: 10px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		line-height: 30px;
+		height: 100x;
+		margin-bottom: 40px;
+		width: 225px;
+		}
+	.legend-key {
+		display: inline-block;
+		border-radius: 20%;
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+		}
+	.map-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #fff;
+		border: 2px solid #eee;
+		margin-right: 20px;
+		font-family: Arial, sans-serif;
+		overflow: auto;
+		border-radius: 3px;
+		}
 </style>
 </head>
 <body>
@@ -187,12 +213,10 @@ rel="stylesheet"
 </div>
 <div id="map" class="map"></div>
 <button id="fit">Zoom Out</button>
+<div class="map-overlay" id="legend"></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzcnAzNmFsNnNkamgifQ.k_o9SiWhtHBqTPptdVv1ag';
-	const bounds = [
-		[-100.638093, 44.582067],
-		[-97.185777, 46.023864]
-	];
+	
       /**
        * Add the map to the page
        */
@@ -200,10 +224,13 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
         container: 'map',
         style: 'mapbox://styles/bannerbdteam/cllxu93fd01gf01qbh5efcwtt',
         center: [-98.8568355, 45.3084925],
-        zoom: 7.5,
+        zoom: 7.8,
         scrollZoom: false
       });
-
+	map.fitBounds([
+		[-100.638093, 44.582067],
+		[-97.185777, 46.023864]
+	]);
       const projects = {
         'type': 'FeatureCollection',
         'features': [
@@ -215,7 +242,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Eureka West Booster Station',
-              'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/Eureka-Booster-Station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+              'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/eureka-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Eureka',
               'estCompletion': 'Fall 2024'
             }
@@ -228,7 +255,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Water Treatment Plant Expansion',
-              'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/Water-Treatment-Plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+              'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/water-treatment-plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Selby',
               'estCompletion': 'Summer 2025'
             }
@@ -241,7 +268,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Main Storage Tanks Rehabilitation',
-              'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/Water-Treatment-Plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+              'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/main-storage-tanks-rehab/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Java',
               'estCompletion': 'Fall 2025'
             }
@@ -254,7 +281,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Rockham West Booster Station',
-              'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/Rockham-W-Booster-Station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+              'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/rockham-w-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Rockham',
               'estCompletion': 'Fall 2024'
             }
@@ -267,7 +294,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
             },
             'properties': {
               'name': 'Bristol Booster Station Replacement',
-              'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have incresed capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/Bristol-Booster-Station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+              'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have incresed capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/bristol-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
               'location': 'Rural Bristol',
               'estCompletion': 'Summer 2025'
             }
@@ -280,7 +307,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 			},
 			'properties': {
 				'name': 'Java North Parallel Pipe',
-				'description': 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java. Refer to the <a href="https://www.webwaterprojects.org/Java-N-Parallel-Pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+				'description': 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java. Refer to the <a href="https://www.webwaterprojects.org/java-n-parallel-pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
 				'location': 'Rural Java',
 				'estCompletion': 'Fall 2024'
 			}
@@ -293,7 +320,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 			},
 			'properties': {
 				'name': 'Glenham Booster Discharge Pipe',
-				'description': 'The new 6-inch PVC pipe will increase capacity and improve pressure for customers downstream. Refer to the <a href="https://www.webwaterprojects.org/Glenham-Booster-Discharge/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+				'description': 'The new 6-inch PVC pipe will increase capacity and improve pressure for customers downstream. Refer to the <a href="https://www.webwaterprojects.org/glenham-booster-discharge/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
 				'location': 'Rural Glenham and Mobridge',
 				'estCompletion': 'Fall 2024'
 			}
@@ -306,7 +333,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 			},
 			'properties': {
 				'name': 'Parallel Mainline Pipe Moratorium Improvement',
-				'description': 'This project increases system capacity for incoming raw water and outgoing treated water for the expanded water treatment plant. Refer to the <a href="https://www.webwaterprojects.org/Parallel-Mainline-Pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+				'description': 'This project increases system capacity for incoming raw water and outgoing treated water for the expanded water treatment plant. Refer to the <a href="https://www.webwaterprojects.org/parallel-mainline-pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
 				'location': 'Rural Glenham and Mobridge',
 				'estCompletion': 'Fall 2025'
 			}
@@ -405,24 +432,24 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
           /* Add a new listing section to the sidebar. */
           const listings = document.getElementById('listings');
           const listing = listings.appendChild(document.createElement('div'));
-          /* Assign a unique `id` to the listing. */
-          listing.id = `listing-${project.properties.id}`;
-          /* Assign the `item` class to each listing for styling. */
-          listing.className = 'item';
+			  /* Assign a unique `id` to the listing. */
+			  listing.id = `listing-${project.properties.id}`;
+			  /* Assign the `item` class to each listing for styling. */
+			  listing.className = 'item';
 
           /* Add the link to the individual listing created above. */
           const link = listing.appendChild(document.createElement('a'));
-          link.href = '#';
-          link.className = 'title';
-          link.id = `link-${project.properties.id}`;
-          link.innerHTML = `${project.properties.name}`;
+			  link.href = '#';
+			  link.className = 'title';
+			  link.id = `link-${project.properties.id}`;
+			  link.innerHTML = `${project.properties.name}`;
 
           /* Add details to the individual listing. */
           const details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = `${project.properties.location}`;
-          if (project.properties.estCompletion) {
-            details.innerHTML += ` &middot; ${project.properties.estCompletion}`;
-          }
+			  details.innerHTML = `${project.properties.location}`;
+			  if (project.properties.estCompletion) {
+				details.innerHTML += ` &middot; ${project.properties.estCompletion}`;
+			  }
 
           /**
            * Listen to the element and when it is clicked, do four things:
@@ -469,6 +496,32 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
           .setHTML(`<h3>${currentFeature.properties.name}</h3><h4>${currentFeature.properties.description}</h4>`)
           .addTo(map);
       }
+	  // define layer names
+const layers = [
+'WEB Service Area',
+'Current Moratorium Areas'
+];
+const colors = [
+'#e5f2fc',
+'#656565'
+];
+ 
+// create legend
+const legend = document.getElementById('legend');
+ 
+layers.forEach((layer, i) => {
+const color = colors[i];
+const item = document.createElement('div');
+const key = document.createElement('span');
+key.className = 'legend-key';
+key.style.backgroundColor = color;
+ 
+const value = document.createElement('span');
+value.innerHTML = `${layer}`;
+item.appendChild(key);
+item.appendChild(value);
+legend.appendChild(item);
+});
 </script>
 </body>
 </html>
