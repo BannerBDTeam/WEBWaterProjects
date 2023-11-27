@@ -28,130 +28,134 @@ rel="stylesheet"
 		background: #fab500;
 		cursor: pointer;
 	}
-      body {
-        color: #404040;
-        font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
-        margin: 0;
-        padding: 0;
-        -webkit-font-smoothing: antialiased;
-      }
+	body {
+		color: #404040;
+		font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+		margin: 0;
+		padding: 0;
+		-webkit-font-smoothing: antialiased;
+	}
 
-      * {
-        box-sizing: border-box;
-      }
+	* {
+		box-sizing: border-box;
+	}
 
-      .sidebar {
-        position: absolute;
-        width: 33.3333%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        border-right: 1px solid rgba(0, 0, 0, 0.25);
-      }
+	.sidebar {
+		position: absolute;
+		width: 25%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		border-right: 1px solid rgba(0, 0, 0, 0.25);
+	}
+	
 
-      .map {
-        position: absolute;
-        left: 33.3333%;
-        width: 66.6666%;
-        top: 0;
-        bottom: 0;
-      }
+	.map {
+		position: absolute;
+		left: 25%;
+		width: 75%;
+		top: 0;
+		bottom: 0;
+	}
 
-      h1 {
-        font-size: 22px;
-        margin: 0;
-        font-weight: 400;
-        line-height: 20px;
-        padding: 20px 2px;
-      }
+	h1 {
+		font-size: 22px;
+		margin: 0;
+		font-weight: 400;
+		line-height: 20px;
+		padding: 20px 2px;
+	}
 
-      a {
-        color: #0061bf;
-        text-decoration: none;
-      }
+	a {
+		color: #0061bf;
+		text-decoration: none;
+	}
 
-      a:hover {
-        color: #3b103b;
-      }
+	a:hover {
+		color: #3b103b;
+	}
 
-      .heading {
-        background: #fff;
-        border-bottom: 1px solid #eee;
-        min-height: 60px;
-        line-height: 60px;
-        padding: 0 10px;
-        background-color: #10263b;
-        color: #fff;
-      }
+	.heading {
+		background: #fff;
+		border-bottom: 1px solid #eee;
+		min-height: 60px;
+		line-height: 60px;
+		padding: 0 10px;
+		background-color: #10263b;
+		color: #fff;
+	}
 
-      .listings {
-        height: 100%;
-        overflow: auto;
-        padding-bottom: 60px;
-      }
+	.listings {
+		height: 90%;
+		overflow: auto;
+		padding-bottom: 60px;
+	}
 
-      .listings .item {
-        display: block;
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-        text-decoration: none;
-      }
+	.listings .item {
+		display: block;
+		border-bottom: 1px solid #eee;
+		padding: 10px;
+		text-decoration: none;
+	}
 
-      .listings .item:last-child {
-        border-bottom: none;
-      }
-      .listings .item .title {
-        display: block;
-        color: #10263b;
-        font-weight: 700;
-      }
+	.listings .item:last-child {
+		border-bottom: none;
+	}
+	.listings .item .title {
+		display: block;
+		color: #10263b;
+		font-weight: 700;
+	}
 
-      .listings .item .title small {
-        font-weight: 400;
-      }
-      .listings .item.active .title,
-      .listings .item .title:hover {
-        color: #3b103b;
-      }
-      .listings .item.active {
-        background-color: #f8f8f8;
-      }
-      ::-webkit-scrollbar {
-        width: 3px;
-        height: 3px;
-        border-left: 0;
-        background: rgba(0, 0, 0, 0.1);
-      }
-      ::-webkit-scrollbar-track {
-        background: none;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #10263b;
-        border-radius: 0;
-      }
+	.listings .item .title small {
+		font-weight: 400;
+	}
+	.listings .item.active .title,
+	.listings .item .title:hover {
+		color: #3b103b;
+	}
+	.listings .item.active {
+		background-color: #f8f8f8;
+	}
+	::-webkit-scrollbar {
+		width: 3px;
+		height: 3px;
+		border-left: 0;
+		background: rgba(0, 0, 0, 0.1);
+	}
+	::-webkit-scrollbar-track {
+		background: none;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #10263b;
+		border-radius: 0;
+	}
 
-      .marker {
-        border: none;
-        cursor: pointer;
-        height: 75px;
-        width: 75px;
-      }
+	.marker {
+		border: none;
+		cursor: pointer;
+		height: 75px;
+		width: 75px;
+	}
 
-      /* Marker tweaks */
-      .mapboxgl-popup {
-        padding-bottom: 50px;
-      }
+	/* Marker tweaks */
+	.mapboxgl-popup {
+		padding-bottom: 50px;
+	}
 
-      .mapboxgl-popup-close-button {
-        display: none;
-      }
-      .mapboxgl-popup-content {
-        font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
-        padding: 0;
-        width: 180px;
-      }
-      .mapboxgl-popup-content h3 {
+	.mapboxgl-popup-close-button {
+		display: true;
+		color: #ffffff;
+		width: 3em;
+		height: 3em;
+	}
+	.mapboxgl-popup-content {
+		font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+		padding: 0;
+		width: 180px;
+	}
+	.mapboxgl-popup-content h3 {
 		background: #10263b;
 		color: #fff;
 		margin: 0;
@@ -159,26 +163,68 @@ rel="stylesheet"
 		border-radius: 3px 3px 0 0;
 		font-weight: 550;
 		margin-top: -15px;
-      }
+	}
 
-      .mapboxgl-popup-content h4 {
-        margin: 0;
-        padding: 10px;
-        font-weight: 400;
-      }
+	.mapboxgl-popup-content h4 {
+		margin: 0;
+		padding: 10px;
+		font-weight: 400;
+	}
 
-      .mapboxgl-popup-content div {
-        padding: 10px;
-      }
+	.mapboxgl-popup-content div {
+		padding: 10px;
+	}
 
-      .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-        margin-top: 15px;
-      }
+	.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+		margin-top: 15px;
+	}
 
-      .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-        border-bottom-color: #91c949;
-      }
-	  #legend {
+	.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+		border-bottom-color: #91c949;
+	}
+	#menu {
+		background: #fff;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		right: 10px;
+		border-radius: 3px;
+		width: 120px;
+		border: 1px solid rgba(0, 0, 0, 0.4);
+		font-family: 'Open Sans', sans-serif;
+	}
+		 
+	#menu a {
+		font-size: 13px;
+		color: #404040;
+		display: block;
+		margin: 0;
+		padding: 0;
+		padding: 10px;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+		text-align: center;
+	}
+		 
+	#menu a:last-child {
+		border: none;
+	}
+		 
+	#menu a:hover {
+		background-color: #f8f8f8;
+		color: #404040;
+	}
+		 
+	#menu a.active {
+		background-color: #3887be;
+		color: #ffffff;
+	}
+		 
+	#menu a.active:hover {
+		background: #3074a4;
+	}
+	
+		#legend {
 		padding: 10px;
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 		line-height: 30px;
@@ -219,89 +265,89 @@ rel="stylesheet"
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzcnAzNmFsNnNkamgifQ.k_o9SiWhtHBqTPptdVv1ag';
 	
-      /**
-       * Add the map to the page
-       */
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/bannerbdteam/cllxu93fd01gf01qbh5efcwtt',
-        center: [-98.8568355, 45.3084925],
-        zoom: 7.8,
-        scrollZoom: false
-      });
+	/**
+	 * Add the map to the page
+	 */
+	const map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/bannerbdteam/cllxu93fd01gf01qbh5efcwtt',
+		center: [-98.8568355, 45.3084925],
+		zoom: 7.8,
+		scrollZoom: false
+	});
 	map.fitBounds([
 		[-100.638093, 44.582067],
 		[-97.185777, 46.023864]
 	]);
-      const projects = {
-        'type': 'FeatureCollection',
-        'features': [
-          {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [-99.801358, 45.766853]
-            },
-            'properties': {
-              'name': 'Eureka West Booster Station',
-              'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/eureka-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-              'location': 'Rural Eureka',
-              'estCompletion': 'Fall 2024'
-            }
-          },
-          {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [-100.227661, 45.436003]
-            },
-            'properties': {
-              'name': 'Water Treatment Plant Expansion',
-              'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/water-treatment-plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-              'location': 'Rural Selby',
-              'estCompletion': 'Summer 2025'
-            }
-          },
-          {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [-99.883844, 45.448681]
-            },
-            'properties': {
-              'name': 'Main Storage Tanks Rehabilitation',
-              'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/main-storage-tanks-rehab/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-              'location': 'Rural Java',
-              'estCompletion': 'Fall 2025'
-            }
-          },
-          {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [-98.879997, 44.897289]
-            },
-            'properties': {
-              'name': 'Rockham West Booster Station',
-              'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/rockham-w-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-              'location': 'Rural Rockham',
-              'estCompletion': 'Fall 2024'
-            }
-          },
-          {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [-97.858381, 45.335861]
-            },
-            'properties': {
-              'name': 'Bristol Booster Station Replacement',
-              'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have incresed capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/bristol-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-              'location': 'Rural Bristol',
-              'estCompletion': 'Summer 2025'
-            }
-          },
-		  {
+	const projects = {
+		'type': 'FeatureCollection',
+		'features': [
+		{
+		'type': 'Feature',
+		'geometry': {
+			'type': 'Point',
+			'coordinates': [-99.801358, 45.766853]
+		},
+		'properties': {
+			'name': 'Eureka West Booster Station',
+			'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/eureka-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+			'location': 'Rural Eureka',
+			'estCompletion': 'Fall 2024'
+		}
+		},
+		{
+		'type': 'Feature',
+		'geometry': {
+			'type': 'Point',
+			'coordinates': [-100.227661, 45.436003]
+		},
+		'properties': {
+			'name': 'Water Treatment Plant Expansion',
+			'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/water-treatment-plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+			'location': 'Rural Selby',
+			'estCompletion': 'Summer 2025'
+		}
+		},
+		{
+		'type': 'Feature',
+		'geometry': {
+			'type': 'Point',
+			'coordinates': [-99.883844, 45.448681]
+		},
+		'properties': {
+			'name': 'Main Storage Tanks Rehabilitation',
+			'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/main-storage-tanks-rehab/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+			'location': 'Rural Java',
+			'estCompletion': 'Fall 2025'
+		}
+		},
+		{
+		'type': 'Feature',
+		'geometry': {
+			'type': 'Point',
+			'coordinates': [-98.879997, 44.897289]
+		},
+		'properties': {
+			'name': 'Rockham West Booster Station',
+			'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/rockham-w-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+			'location': 'Rural Rockham',
+			'estCompletion': 'Fall 2024'
+		}
+		},
+		{
+		'type': 'Feature',
+		'geometry': {
+			'type': 'Point',
+			'coordinates': [-97.858381, 45.335861]
+		},
+		'properties': {
+			'name': 'Bristol Booster Station Replacement',
+			'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have increased capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/bristol-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+			'location': 'Rural Bristol',
+			'estCompletion': 'Summer 2025'
+		}
+		},
+			{
 			'type': 'Feature',
 			'geometry': {
 				'type': 'Point',
@@ -313,8 +359,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 				'location': 'Rural Java',
 				'estCompletion': 'Fall 2024'
 			}
-		   },
-		   {
+			 },
+			 {
 			'type': 'Feature',
 			'geometry': {
 				'type': 'Point',
@@ -326,8 +372,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 				'location': 'Rural Glenham and Mobridge',
 				'estCompletion': 'Fall 2024'
 			}
-		   },
-		   {
+			 },
+			 {
 			'type': 'Feature',
 			'geometry': {
 				'type': 'Point',
@@ -339,190 +385,262 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 				'location': 'Rural Glenham and Mobridge',
 				'estCompletion': 'Fall 2025'
 			}
-		   }
+			 },
+			 {
+			'type': 'Feature',
+			'geometry': {
+				'type': 'Point',
+				'coordinates': [-100.031901, 45.513563]
+			},
+			'properties': {
+				'name': 'Standby Power Generation (Not Depicted in Map)',
+				'description': 'This project is an ongoing effort to install standby generators at critical facilities across the WEB system. Refer to the <a href="https://www.webwaterprojects.org/standby-power-generation" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+				'location': 'Multiple Locations',
+				'estCompletion': 'Fall 2025'
+			}
+			 }
 		]
-      };
+	};
+			
+	/**
+	 * Assign a unique id to each project. You'll use this `id`
+	 * later to associate each point on the map with a listing
+	 * in the sidebar.
+	 */
+	projects.features.forEach((project, i) => {
+		project.properties.id = i;
+	});
 
-      /**
-       * Assign a unique id to each project. You'll use this `id`
-       * later to associate each point on the map with a listing
-       * in the sidebar.
-       */
-      projects.features.forEach((project, i) => {
-        project.properties.id = i;
-      });
+	/**
+	 * Wait until the map loads to make changes to the map.
+	 */
+	map.on('load', () => {
+		/**
+		 * This is where your '.addLayer()' used to be, instead
+		 * add only the source without styling a layer
+		 */
+		map.addSource('places', {
+		'type': 'geojson',
+		'data': projects
+		});
 
-      /**
-       * Wait until the map loads to make changes to the map.
-       */
-      map.on('load', () => {
-        /**
-         * This is where your '.addLayer()' used to be, instead
-         * add only the source without styling a layer
-         */
-        map.addSource('places', {
-          'type': 'geojson',
-          'data': projects
-        });
+		/**
+		 * Add all the things to the page:
+		 * - The location listings on the side of the page
+		 * - The markers onto the map
+		 */
+		buildLocationList(projects);
+		addMarkers();
+	});
+		
 
-        /**
-         * Add all the things to the page:
-         * - The location listings on the side of the page
-         * - The markers onto the map
-         */
-        buildLocationList(projects);
-        addMarkers();
-      });
-	  document.getElementById('fit').addEventListener('click', () => {
+	/**
+	 * Add a marker to the map for every project listing.
+	 **/
+	function addMarkers() {
+		/* For each feature in the GeoJSON object above: */
+		for (const marker of projects.features) {
+		/* Create a div element for the marker. */
+		const el = document.createElement('div');
+		/* Assign a unique `id` to the marker. */
+		el.id = `marker-${marker.properties.id}`;
+		/* Assign the `marker` class to each marker for styling. */
+		el.className = 'marker';
+
+		/**
+		 * Create a marker using the div element
+		 * defined above and add it to the map.
+		 **/
+		new mapboxgl.Marker(el, { offset: [0, 0] })
+		.setLngLat(marker.geometry.coordinates)
+		.addTo(map);
+
+		/**
+		 * Listen to the element and when it is clicked, do three things:
+		 * 1. Fly to the point
+		 * 2. Close all other popups and display popup for clicked project
+		 * 3. Highlight listing in sidebar (and remove highlight for all other listings)
+		 **/
+		el.addEventListener('click', (e) => {
+		/* Fly to the point */
+		flyToProject(marker);
+		/* Close all other popups and display popup for clicked project */
+		createPopUp(marker);
+		/* Highlight listing in sidebar */
+		const activeItem = document.getElementsByClassName('active');
+		e.stopPropagation();
+		if (activeItem[0]) {
+			activeItem[0].classList.remove('active');
+		}
+		const listing = document.getElementById(
+			`listing-${marker.properties.id}`
+		);
+		listing.classList.add('active');
+		});
+		}
+	}
+
+	/**
+	 * Add a listing for each project to the sidebar.
+	 **/
+	function buildLocationList(projects) {
+		for (const project of projects.features) {
+		/* Add a new listing section to the sidebar. */
+		const listings = document.getElementById('listings');
+		const listing = listings.appendChild(document.createElement('div'));
+				/* Assign a unique `id` to the listing. */
+				listing.id = `listing-${project.properties.id}`;
+				/* Assign the `item` class to each listing for styling. */
+				listing.className = 'item';
+
+		/* Add the link to the individual listing created above. */
+		const link = listing.appendChild(document.createElement('a'));
+				link.href = '#';
+				link.className = 'title';
+				link.id = `link-${project.properties.id}`;
+				link.innerHTML = `${project.properties.name}`;
+
+		/* Add details to the individual listing. */
+		const details = listing.appendChild(document.createElement('div'));
+				details.innerHTML = `${project.properties.location}`;
+				if (project.properties.estCompletion) {
+				details.innerHTML += ` &middot; ${project.properties.estCompletion}`;
+				}
+
+		/**
+		 * Listen to the element and when it is clicked, do four things:
+		 * 1. Update the `currentFeature` to the project associated with the clicked link
+		 * 2. Fly to the point
+		 * 3. Close all other popups and display popup for clicked project
+		 * 4. Highlight listing in sidebar (and remove highlight for all other listings)
+		 **/
+		link.addEventListener('click', function () {
+		for (const feature of projects.features) {
+			if (this.id === `link-${feature.properties.id}`) {
+			flyToProject(feature);
+			createPopUp(feature);
+			}
+		}
+		const activeItem = document.getElementsByClassName('active');
+		if (activeItem[0]) {
+			activeItem[0].classList.remove('active');
+		}
+		this.parentNode.classList.add('active');
+		});
+		}
+	}
+
+	/**
+	 * Use Mapbox GL JS's `flyTo` to move the camera smoothly
+	 * a given center point.
+	 **/
+	function flyToProject(currentFeature) {
+		map.flyTo({
+		center: currentFeature.geometry.coordinates,
+		zoom: 10
+		});
+	}
+
+	/**
+	 * Create a Mapbox GL JS `Popup`.
+	 **/
+	function createPopUp(currentFeature) {
+		const popUps = document.getElementsByClassName('mapboxgl-popup');
+		if (popUps[0]) popUps[0].remove();
+		const popup = new mapboxgl.Popup({ closeOnClick: true })
+		.setLngLat(currentFeature.geometry.coordinates)
+		.setHTML(`<h3>${currentFeature.properties.name}</h3><h4>${currentFeature.properties.description}</h4>`)
+		.addTo(map);
+	}
+		document.getElementById('fit').addEventListener('click', () => {
 		map.fitBounds([
 			[-100.638093, 44.582067], // southwestern corner of the bounds
 			[-97.185777, 46.023864] // northeastern corner of the bounds
 		]);
-	  });
+	for (var popup of document.getElementsByClassName("mapboxgl-popup")) {
+		popup.remove();
+		}		
+		});
+		// define layer names
+	const layers = [
+		'WEB Service Area',
+		'Current Moratorium Areas'
+	];
+	const colors = [
+		'#e5f2fc',
+		'#656565'
+	];
+	 
+	// create legend
+	const legend = document.getElementById('legend');
+	 
+	layers.forEach((layer, i) => {
+		const color = colors[i];
+		const item = document.createElement('div');
+		const key = document.createElement('span');
+		key.className = 'legend-key';
+		key.style.backgroundColor = color;
+	 
+	const value = document.createElement('span');
+		value.innerHTML = `${layer}`;
+		item.appendChild(key);
+		item.appendChild(value);
+		legend.appendChild(item);
 
-      /**
-       * Add a marker to the map for every project listing.
-       **/
-      function addMarkers() {
-        /* For each feature in the GeoJSON object above: */
-        for (const marker of projects.features) {
-          /* Create a div element for the marker. */
-          const el = document.createElement('div');
-          /* Assign a unique `id` to the marker. */
-          el.id = `marker-${marker.properties.id}`;
-          /* Assign the `marker` class to each marker for styling. */
-          el.className = 'marker';
-
-          /**
-           * Create a marker using the div element
-           * defined above and add it to the map.
-           **/
-          new mapboxgl.Marker(el, { offset: [0, 0] })
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
-
-          /**
-           * Listen to the element and when it is clicked, do three things:
-           * 1. Fly to the point
-           * 2. Close all other popups and display popup for clicked project
-           * 3. Highlight listing in sidebar (and remove highlight for all other listings)
-           **/
-          el.addEventListener('click', (e) => {
-            /* Fly to the point */
-            flyToProject(marker);
-            /* Close all other popups and display popup for clicked project */
-            createPopUp(marker);
-            /* Highlight listing in sidebar */
-            const activeItem = document.getElementsByClassName('active');
-            e.stopPropagation();
-            if (activeItem[0]) {
-              activeItem[0].classList.remove('active');
-            }
-            const listing = document.getElementById(
-              `listing-${marker.properties.id}`
-            );
-            listing.classList.add('active');
-          });
-        }
-      }
-
-      /**
-       * Add a listing for each project to the sidebar.
-       **/
-      function buildLocationList(projects) {
-        for (const project of projects.features) {
-          /* Add a new listing section to the sidebar. */
-          const listings = document.getElementById('listings');
-          const listing = listings.appendChild(document.createElement('div'));
-			  /* Assign a unique `id` to the listing. */
-			  listing.id = `listing-${project.properties.id}`;
-			  /* Assign the `item` class to each listing for styling. */
-			  listing.className = 'item';
-
-          /* Add the link to the individual listing created above. */
-          const link = listing.appendChild(document.createElement('a'));
-			  link.href = '#';
-			  link.className = 'title';
-			  link.id = `link-${project.properties.id}`;
-			  link.innerHTML = `${project.properties.name}`;
-
-          /* Add details to the individual listing. */
-          const details = listing.appendChild(document.createElement('div'));
-			  details.innerHTML = `${project.properties.location}`;
-			  if (project.properties.estCompletion) {
-				details.innerHTML += ` &middot; ${project.properties.estCompletion}`;
-			  }
-
-          /**
-           * Listen to the element and when it is clicked, do four things:
-           * 1. Update the `currentFeature` to the project associated with the clicked link
-           * 2. Fly to the point
-           * 3. Close all other popups and display popup for clicked project
-           * 4. Highlight listing in sidebar (and remove highlight for all other listings)
-           **/
-          link.addEventListener('click', function () {
-            for (const feature of projects.features) {
-              if (this.id === `link-${feature.properties.id}`) {
-                flyToProject(feature);
-                createPopUp(feature);
-              }
-            }
-            const activeItem = document.getElementsByClassName('active');
-            if (activeItem[0]) {
-              activeItem[0].classList.remove('active');
-            }
-            this.parentNode.classList.add('active');
-          });
-        }
-      }
-
-      /**
-       * Use Mapbox GL JS's `flyTo` to move the camera smoothly
-       * a given center point.
-       **/
-      function flyToProject(currentFeature) {
-        map.flyTo({
-          center: currentFeature.geometry.coordinates,
-          zoom: 10
-        });
-      }
-
-      /**
-       * Create a Mapbox GL JS `Popup`.
-       **/
-      function createPopUp(currentFeature) {
-        const popUps = document.getElementsByClassName('mapboxgl-popup');
-        if (popUps[0]) popUps[0].remove();
-        const popup = new mapboxgl.Popup({ closeOnClick: false })
-          .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML(`<h3>${currentFeature.properties.name}</h3><h4>${currentFeature.properties.description}</h4>`)
-          .addTo(map);
-      }
-	  // define layer names
-const layers = [
-'WEB Service Area',
-'Current Moratorium Areas'
-];
-const colors = [
-'#e5f2fc',
-'#656565'
-];
- 
-// create legend
-const legend = document.getElementById('legend');
- 
-layers.forEach((layer, i) => {
-const color = colors[i];
-const item = document.createElement('div');
-const key = document.createElement('span');
-key.className = 'legend-key';
-key.style.backgroundColor = color;
- 
-const value = document.createElement('span');
-value.innerHTML = `${layer}`;
-item.appendChild(key);
-item.appendChild(value);
-legend.appendChild(item);
+	// After the last frame rendered before the map enters an "idle" state.
+	map.on('idle', () => {
+	// If these two layers were not added to the map, abort
+		if (!map.getLayer('WEB Service Area') || !map.getLayer('Current Moratorium Area')) {
+			return;
+		}
+	 
+	// Enumerate ids of the layers.
+	const toggleableLayerIds = ['WEB Service Area', 'Current Moratorium Areas'];
+	 
+	// Set up the corresponding toggle button for each layer.
+		for (const id of toggleableLayerIds) {
+			// Skip layers that already have a button set up.
+			if (document.getElementById(id)) {
+				continue;
+			}
+	 
+	// Create a link.
+	const link = document.createElement('a');
+		link.id = id;
+		link.href = '#';
+		link.textContent = id;
+		link.className = 'active';
+	 
+	// Show or hide layer when the toggle is clicked.
+	link.onclick = function (e) {
+		const clickedLayer = this.textContent;
+		e.preventDefault();
+		e.stopPropagation();
+	 
+	const visibility = map.getLayoutProperty(
+		clickedLayer,
+		'visibility'
+	);
+	 
+	// Toggle layer visibility by changing the layout object's visibility property.
+	if (visibility === 'visible') {
+		map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+		this.className = '';
+	} else 
+	{
+		this.className = 'active';
+		map.setLayoutProperty(
+			clickedLayer,
+				'visibility',
+				'visible'
+		);
+	}
+	};
+	 
+	const layers = document.getElementById('menu');
+	layers.appendChild(link);
+	}
+	});
 });
 </script>
 </body>
