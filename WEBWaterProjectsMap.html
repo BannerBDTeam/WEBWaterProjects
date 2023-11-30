@@ -42,7 +42,7 @@ rel="stylesheet"
 
 	.sidebar {
 		position: absolute;
-		width: 25%;
+		width: 30%;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -53,8 +53,8 @@ rel="stylesheet"
 
 	.map {
 		position: absolute;
-		left: 25%;
-		width: 75%;
+		left: 30%;
+		width: 70%;
 		top: 0;
 		bottom: 0;
 	}
@@ -281,124 +281,137 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmFubmVyYmR0ZWFtIiwiYSI6ImNsbHh1N21jbTE2engzc
 	]);
 	const projects = {
 		'type': 'FeatureCollection',
-		'features': [
-		{
-		'type': 'Feature',
-		'geometry': {
-			'type': 'Point',
-			'coordinates': [-99.801358, 45.766853]
-		},
-		'properties': {
-			'name': 'Eureka West Booster Station',
-			'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/eureka-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-			'location': 'Rural Eureka',
-			'estCompletion': 'Fall 2024'
-		}
-		},
-		{
-		'type': 'Feature',
-		'geometry': {
-			'type': 'Point',
-			'coordinates': [-100.227661, 45.436003]
-		},
-		'properties': {
-			'name': 'Water Treatment Plant Expansion',
-			'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/water-treatment-plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-			'location': 'Rural Selby',
-			'estCompletion': 'Summer 2025'
-		}
-		},
-		{
-		'type': 'Feature',
-		'geometry': {
-			'type': 'Point',
-			'coordinates': [-99.883844, 45.448681]
-		},
-		'properties': {
-			'name': 'Main Storage Tanks Rehabilitation',
-			'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/main-storage-tanks-rehab/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-			'location': 'Rural Java',
-			'estCompletion': 'Fall 2025'
-		}
-		},
-		{
-		'type': 'Feature',
-		'geometry': {
-			'type': 'Point',
-			'coordinates': [-98.879997, 44.897289]
-		},
-		'properties': {
-			'name': 'Rockham West Booster Station',
-			'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/rockham-w-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-			'location': 'Rural Rockham',
-			'estCompletion': 'Fall 2024'
-		}
-		},
-		{
-		'type': 'Feature',
-		'geometry': {
-			'type': 'Point',
-			'coordinates': [-97.858381, 45.335861]
-		},
-		'properties': {
-			'name': 'Bristol Booster Station Replacement',
-			'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have increased capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/bristol-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-			'location': 'Rural Bristol',
-			'estCompletion': 'Summer 2025'
-		}
-		},
-			{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'Point',
-				'coordinates': [-99.801185, 45.593712]
-			},
-			'properties': {
-				'name': 'Java North Parallel Pipe',
-				'description': 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java. Refer to the <a href="https://www.webwaterprojects.org/java-n-parallel-pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-				'location': 'Rural Java',
-				'estCompletion': 'Fall 2024'
-			}
-			 },
-			 {
-			'type': 'Feature',
-			'geometry': {
-				'type': 'Point',
-				'coordinates': [-100.35594, 45.539221]
-			},
-			'properties': {
-				'name': 'Glenham Booster Discharge Pipe',
-				'description': 'The new 6-inch PVC pipe will increase capacity and improve pressure for customers downstream. Refer to the <a href="https://www.webwaterprojects.org/glenham-booster-discharge/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-				'location': 'Rural Glenham and Mobridge',
-				'estCompletion': 'Fall 2024'
-			}
-			 },
-			 {
-			'type': 'Feature',
-			'geometry': {
-				'type': 'Point',
-				'coordinates': [-100.096035, 45.450137]
-			},
-			'properties': {
-				'name': 'Parallel Mainline Pipe Moratorium Improvement',
-				'description': 'This project increases system capacity for incoming raw water and outgoing treated water for the expanded water treatment plant. Refer to the <a href="https://www.webwaterprojects.org/parallel-mainline-pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-				'location': 'Rural Glenham and Mobridge',
-				'estCompletion': 'Fall 2025'
-			}
-			 },
-			 {
-			'type': 'Feature',
-			'geometry': {
-				'type': 'Point',
-				'coordinates': [-100.031901, 45.513563]
-			},
-			'properties': {
-				'name': 'Standby Power Generation (Not Depicted in Map)',
-				'description': 'This project is an ongoing effort to install standby generators at critical facilities across the WEB system. Refer to the <a href="https://www.webwaterprojects.org/standby-power-generation" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
-				'location': 'Multiple Locations',
-				'estCompletion': 'Fall 2025'
-			}
-			 }
+			'features': [
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-99.801358, 45.766853]
+					},
+					'properties': {
+						'name': 'Eureka West Booster Station',
+						'description': 'Adding an additional booster station west of Eureka will improve capacity in the area. Refer to the <a href="https://www.webwaterprojects.org/eureka-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Eureka',
+						'estCompletion': 'Fall 2024'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-100.227661, 45.436003]
+					},
+					'properties': {
+						'name': 'Water Treatment Plant Expansion',
+						'description': 'The expansion of the WEB Water Treatment Plant will increase our system capacity and replace aging components. Refer to the <a href="https://www.webwaterprojects.org/water-treatment-plant/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Selby',
+						'estCompletion': 'Summer 2025'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-99.883844, 45.448681]
+					},
+					'properties': {
+						'name': 'Main Storage Tanks Rehabilitation',
+						'description': 'The Main Storage Tank Rehabilitation project will restore / replace aging components for increased longevity. Refer to the <a href="https://www.webwaterprojects.org/main-storage-tanks-rehab/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Java',
+						'estCompletion': 'Fall 2025'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-98.879997, 44.897289]
+					},
+					'properties': {
+						'name': 'Rockham West Booster Station',
+						'description': 'The new booster station will increase water pressure in the area west of Rockham. Refer to the <a href="https://www.webwaterprojects.org/rockham-w-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Rockham',
+						'estCompletion': 'Fall 2024'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-97.858381, 45.335861]
+					},
+					'properties': {
+						'name': 'Bristol Booster Station Replacement',
+						'description': 'The current Bristol booster station has reached the end of its useful life and will be replaced. The new pump station will have increased capacity and modern equipment. Refer to the <a href="https://www.webwaterprojects.org/bristol-booster-station/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Bristol',
+						'estCompletion': 'Summer 2025'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-99.801185, 45.593712]
+					},
+					'properties': {
+						'name': 'Java North Parallel Pipe',
+						'description': 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java. Refer to the <a href="https://www.webwaterprojects.org/java-n-parallel-pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Java',
+						'estCompletion': 'Fall 2024'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-100.35594, 45.539221]
+					},
+					'properties': {
+						'name': 'Glenham Booster Discharge Pipe',
+						'description': 'The new 6-inch PVC pipe will increase capacity and improve pressure for customers downstream. Refer to the <a href="https://www.webwaterprojects.org/glenham-booster-discharge/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Glenham and Mobridge',
+						'estCompletion': 'Fall 2024'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-100.096035, 45.450137]
+					},
+					'properties': {
+						'name': 'Parallel Mainline Pipe Moratorium Improvement',
+						'description': 'This project increases system capacity for incoming raw water and outgoing treated water for the expanded water treatment plant. Refer to the <a href="https://www.webwaterprojects.org/parallel-mainline-pipe/" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Rural Glenham and Mobridge',
+						'estCompletion': 'Fall 2025'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-99.279515, 45.596893]
+					},
+					'properties': {
+						'name': 'Standby Power Generation (Not Depicted in Map)',
+						'description': 'This project is an ongoing effort to install standby generators at critical facilities across the WEB system. Refer to the <a href="https://www.webwaterprojects.org/standby-power-generation" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Multiple Locations',
+						'estCompletion': 'Fall 2025'
+					}
+				},
+				{
+				'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': [-98.713835, 45.794012]
+					},
+					'properties': {
+						'name': 'PVC Pipe Moratorium Improvements (Multiple locations)',
+						'description': 'This project is an ongoing effort to install standby generators at critical facilities across the WEB system. Refer to the <a href="https://webwaterprojects.org/distribution-pvc-pipe-1" target="_blank" rel="noopener noreferrer">project page</a> for more details.',
+						'location': 'Multiple Locations',
+						'estCompletion': 'Fall 2025'
+					}
+				}
 		]
 	};
 			
