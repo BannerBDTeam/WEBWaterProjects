@@ -412,8 +412,8 @@ const projects = {
         estCompletion: 'Fall 2027'
       }
     },
-    {
-      type: 'Feature',
+    {     
+      type: 'Feature',
       geometry: {
         type: 'Point',
         coordinates: [-97.52539138120216, 45.39888929668857]
@@ -422,24 +422,11 @@ const projects = {
         name: 'Webster North Booster',
         description: 'The new Webster North Booster will improve system pressure and capacity for these areas. The new above ground pump station will include high efficiency pumps and motors.',
         location: 'North of Webster, SD',
-	estCompletion: 'Winter 2026'
-      }
-     }
-    ]
-   }
- });
-	
- map.addLayer({
-      id: 'project-pins',
-      type: 'symbol',
-      source: 'projects',
-      layout: {
-       icon-image': 'custom-pin',
-        'icon-size':
-      }
-    });
-  });
-});	
+        estCompletion: 'Winter 2026'
+      }
+    }
+  ]
+};	
 	/**
 	 * Assign a unique id to each project. You'll use this `id`
 	 * later to associate each point on the map with a listing
