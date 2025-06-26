@@ -329,9 +329,9 @@ const projects = {
       },
       properties: {
         name: 'Java North Parallel Pipe',
-        description: 'A new 12-inch watermain will be installed to increase capacity to the areas north of Java. Refer to the https://www.webwaterprojects.org/java-n-parallel-pipe/ for more details.',
+        description: 'The concrete reservoir rehabilitation was completed in 2024. The steel reservoir rehabilitation will consist of surface preparation and application of high-performance coatings to help prevent corrosion of the steel. The rehabilitation will ensure the continued reliable operation of these tanks into the future. Refer to the https://www.webwaterprojects.org/java-n-parallel-pipe/ for more details.',
         location: 'Rural Java',
-        estCompletion: 'Fall 2024'
+        estCompletion: 'December 2025'
       }
     },
     {
@@ -368,9 +368,9 @@ const projects = {
       },
       properties: {
         name: 'Zeeland Tank Roof',
-        description: 'Roof replacement project for the Zeeland water tank.',
-        location: 'Zeeland, SD',
-        estCompletion: 'TBD'
+        description: 'This project consists of installing a new roof on Zeeland tank. The Zeeland Tank is a bolted steel storage reservoir.',
+        location: 'Rural Zeeland',
+        estCompletion: 'Fall 2025'
       }
     },
     {
@@ -381,9 +381,9 @@ const projects = {
       },
       properties: {
         name: 'Cresbard Control Station',
-        description: 'Control station upgrade project in Cresbard.',
+        description: 'This project consists of the construction of a new control station, installation of new pipe, and Highway 12 crossing to harden (strengthen/reinforce) the mainline. The control station will be an above ground building that will be used to control the water flow from the mainline pipe into the Cresbard tank and surrounding area.',
         location: 'Cresbard, SD',
-        estCompletion: 'TBD'
+        estCompletion: 'Fall 2025'
       }
     },
     {
@@ -394,9 +394,9 @@ const projects = {
       },
       properties: {
         name: 'Mound City South Booster',
-        description: 'Booster station upgrade project in Mound City.',
-        location: 'Mound City, SD',
-        estCompletion: 'TBD'
+        description: 'The new Mound City South Booster will increase flow rates through the watermain, therefore increasing capacities and boosting pressures to the surrounding areas.',
+        location: 'Rural Mound City',
+        estCompletion: 'Spring 2026'
       }
     },
     {
@@ -408,9 +408,9 @@ const projects = {
 },
       properties: {
         name: 'Roslyn Booster Upgrade',
-        description: 'Booster station upgrade project in Roslyn.',
+        description: 'The new above ground pump station will improve the surrounding areas with increased capacity and include high efficiency pumps and motors.',
         location: 'Roslyn, SD',
-        estCompletion: 'TBD'
+        estCompletion: 'Fall 2027'
       }
     },
     {
@@ -421,13 +421,26 @@ const projects = {
       },
       properties: {
         name: 'Webster North Booster',
-        description: 'Booster station project located north of Webster. Refer to the project documentation for more details.',
+        description: 'The new Webster North Booster will improve system pressure and capacity for these areas. The new above ground pump station will include high efficiency pumps and motors.',
         location: 'North of Webster, SD',
-        estCompletion: 'TBD'
+	estCompletion: 'Winter 2026'
+            }
+          }
+        ]
       }
-    }
-  ]
-};		
+    });
+
+    map.addLayer({
+      id: 'project-pins',
+      type: 'symbol',
+      source: 'projects',
+      layout: {
+       icon-image': 'custom-pin',
+        'icon-size': 1
+      }
+    });
+  });
+});	
 	/**
 	 * Assign a unique id to each project. You'll use this `id`
 	 * later to associate each point on the map with a listing
