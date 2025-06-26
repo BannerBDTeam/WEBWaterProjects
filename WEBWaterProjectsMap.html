@@ -404,8 +404,7 @@ const projects = {
       geometry: {
         type: 'Point',
         coordinates: [-97.48875762658088, 45.4997433611349]
-      
-},
+      },
       properties: {
         name: 'Roslyn Booster Upgrade',
         description: 'The new above ground pump station will improve the surrounding areas with increased capacity and include high efficiency pumps and motors.',
@@ -424,20 +423,20 @@ const projects = {
         description: 'The new Webster North Booster will improve system pressure and capacity for these areas. The new above ground pump station will include high efficiency pumps and motors.',
         location: 'North of Webster, SD',
 	estCompletion: 'Winter 2026'
-            }
-          }
-        ]
-      }
-    });
-
-    map.addLayer({
+      }
+     }
+    ]
+   }
+ });
+	
+ map.addLayer({
       id: 'project-pins',
       type: 'symbol',
       source: 'projects',
       layout: {
        icon-image': 'custom-pin',
-        'icon-size': 1
-      }
+        'icon-size':
+      }
     });
   });
 });	
